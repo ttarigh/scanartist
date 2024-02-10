@@ -2,9 +2,10 @@
 <html>
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
   <style>
-    #arjsDebugUIContainer{
-      display:none;
+    #arjsDebugUIContainer {
+      display: none;
     }
   </style>
   <body style="margin: 0px; overflow: hidden">
@@ -32,13 +33,14 @@
       >
         <a-asset-item
           id="angelWings"
-          src="assets/angel_wings.glb"
+          src="assets/low_poly_animated_phoenix_wings.glb"
         ></a-asset-item>
         <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
+          position="0 1 0"
+          scale="1 1 1"
+          animation-mixer="clip:Armature|Idle_2_B"
           gltf-model="#angelWings"
-          rotation="270 0 0"
+          rotation="90 270 0"
         ></a-entity>
       </a-marker>
 
@@ -70,7 +72,7 @@
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
-      <!-- Boobs -->
+      <!-- Dick -->
       <a-marker
         preset="pattern"
         type="pattern"
@@ -90,12 +92,15 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-hats.patt"
       >
-        <a-asset-item id="hats" src="assets/coloredhats.glb"></a-asset-item>
+        <a-asset-item
+          id="hats"
+          src="assets/marilyn_monroe_hair.glb"
+        ></a-asset-item>
         <a-entity
-          position="0 0 0"
+          position="0 0 6"
           scale="0.2 0.2 0.2"
           gltf-model="#hats"
-          rotation="270 0 0"
+          rotation="90 180 0"
         ></a-entity>
       </a-marker>
       <!-- Dog Balloon -->
@@ -115,18 +120,37 @@
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
-      <!-- Arms -->
+      <!-- Cupcake -->
       <a-marker
         preset="pattern"
         type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-arms.patt" 
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-cupcake.patt"
       >
-      <!-- ARMS PATTERN IS CUPCAKE2 -->
-        <a-asset-item id="arms" src="assets/fps-_arms.glb"></a-asset-item>
+        <a-asset-item
+          id="cupcake"
+          src="assets/elegant_cupcake.glb"
+        ></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
-          gltf-model="#arms"
+          gltf-model="#cupcake"
+          rotation="270 0 0"
+        ></a-entity>
+      </a-marker>
+      <!-- CUPCAKE 2 -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-arms.patt"
+      >
+        <a-asset-item
+          id="cupcake2"
+          src="assets/extra_chocolate_marshmallow_cupcake.glb"
+        ></a-asset-item>
+        <a-entity
+          position="0 0 0"
+          scale="0.2 0.2 0.2"
+          gltf-model="#cupcake2"
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
@@ -136,10 +160,7 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-horse.patt"
       >
-        <a-asset-item
-          id="horse"
-          src="assets/horse_draft_horse.glb"
-        ></a-asset-item>
+        <a-asset-item id="horse" src="assets/FRONTHORSE.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
@@ -153,10 +174,7 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-horseSkel.patt"
       >
-        <a-asset-item
-          id="horseSkel"
-          src="assets/horse_skeleton.glb"
-        ></a-asset-item>
+        <a-asset-item id="horseSkel" src="assets/HORSEBACK.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
@@ -195,35 +213,6 @@
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
-      <!-- Cross -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-cross.patt"
-      >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- Look Like -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/whatYouLookLike"
-      >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
 
       <!-- You Are -->
       <a-marker
@@ -231,11 +220,15 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-youAre.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
+        <a-asset-item
+          id="securityCam"
+          src="assets/security_camera_with_animations__textures.glb"
+        ></a-asset-item>
         <a-entity
           position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
+          scale="5 5 5"
+          animation-mixer="clip:Sweep_90_Right"
+          gltf-model="#securityCam"
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
@@ -246,30 +239,15 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-water.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
+        <a-asset-item id="water" src="assets/water.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
+          animation-mixer="clip:"
+          gltf-model="#water"
+          rotation="290 0 0"
         ></a-entity>
       </a-marker>
-
-      <!-- Trend Cycles -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-time.patt"
-      >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-
       <!-- Basic Shirt -->
       <a-marker
         preset="pattern"
@@ -285,13 +263,67 @@
         ></a-entity>
       </a-marker>
 
-      <!-- Shein Style Scrape-->
+      <!-- Made Of -->
       <a-marker
         preset="pattern"
         type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-shein.patt"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-madeOf.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
+        <a-asset-item id="madeOf" src="assets/madeOf.glb"></a-asset-item>
+        <a-entity position="0 0 0" scale="0.5 0.5 0.5" rotation="270 0 0">
+          <a-entity gltf-model="#madeOf">
+            <a-animation
+              attribute="rotation"
+              to="0 360 0"
+              dur="10000"
+              easing="linear"
+              repeat="indefinite"
+            ></a-animation>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+
+      <!-- PINK Cross -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-cross.patt"
+      >
+        <a-asset-item id="cross" src="assets/cross.glb"></a-asset-item>
+        <a-entity position="0 0 0" scale="0.5 0.5 0.5" rotation="270 0 0">
+          <a-entity gltf-model="#cross">
+            <a-animation
+              attribute="rotation"
+              to="0 360 0"
+              dur="10000"
+              easing="linear"
+              repeat="indefinite"
+            ></a-animation>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+
+      <!-- Landfill -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-landfill.patt"
+      >
+        <a-asset-item id="landfill" src="assets/landfill.glb"></a-asset-item>
+        <a-entity
+          position="0 0 0"
+          scale="0.2 0.2 0.2"
+          gltf-model="#landfill"
+          rotation="270 0 0"
+        ></a-entity>
+      </a-marker>
+      <!-- Finale -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-finale.patt"
+      >
+        <a-asset-item id="cross" src="assets/cross.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
@@ -300,31 +332,131 @@
         ></a-entity>
       </a-marker>
 
-      <!-- Made Of -->
+      <!-- Country Crisis-->
       <a-marker
         preset="pattern"
         type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-madeOf.patt"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-country.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
+        <!-- Define a plane to show the video -->
+        <a-plane
           position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
+          scale="1 1 1"
+          rotation="-90 0 0"
+          material="shader: flat; src: #video"
+        ></a-plane>
+        <!-- Define the video asset -->
+        <video
+          id="video"
+          autoplay
+          loop
+          crossorigin="anonymous"
+          src="assets/flags.mp4"
+        ></video>
       </a-marker>
+
+      <!-- Look Like -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/whatYouLookLike"
+      >
+        <a-plane
+          position="0 0 0"
+          scale="1 1 1"
+          rotation="-90 0 0"
+          material="shader: flat; src: #video2"
+        ></a-plane>
+        <!-- Define the video asset -->
+        <video
+          id="video2"
+          autoplay
+          loop
+          crossorigin="anonymous"
+          src="assets/adsspeed.mp4"
+        ></video>
+      </a-marker>
+
+      <!-- Faster -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-faster.patt"
+      >
+        <a-plane
+          position="0 0 0"
+          scale="1 1 1"
+          rotation="-90 0 0"
+          material="shader: flat; src: #video3"
+        ></a-plane>
+        <!-- Define the video asset -->
+        <video
+          id="video3"
+          autoplay
+          loop
+          crossorigin="anonymous"
+          src="assets/makeFashionFasterNew.mp4"
+        ></video>
+      </a-marker>
+
+      <!-- Shein Style Scrape-->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-shein.patt"
+      >
+        <a-plane
+          position="0 0 0"
+          scale="1 1 1"
+          rotation="-90 0 0"
+          material="shader: flat; src: #video4"
+        ></a-plane>
+        <!-- Define the video asset -->
+        <video
+          id="video4"
+          autoplay
+          loop
+          crossorigin="anonymous"
+          src="assets/sheinScrapeNew.mp4"
+        ></video>
+      </a-marker>
+
+      <!-- Trend Cycles -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-time.patt"
+      >
+        <a-plane
+          position="0 0 0"
+          scale="1 1 1"
+          rotation="-90 0 0"
+          material="shader: flat; src: #video5"
+        ></a-plane>
+        <!-- Define the video asset -->
+        <video
+          id="video5"
+          autoplay
+          loop
+          crossorigin="anonymous"
+          src="assets/trendCycleNew.mp4"
+        ></video>
+      </a-marker>
+
       <!-- Lazars -->
       <a-marker
         preset="pattern"
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars3.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
+        <a-asset-item
+          id="greenlaser"
+          src="assets/greenlaser.glb"
+        ></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
-          gltf-model="#cross"
+          gltf-model="#greenlaser"
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
@@ -333,11 +465,11 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars2.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
+        <a-asset-item id="pinklaser" src="assets/pinklaser.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
-          gltf-model="#cross"
+          gltf-model="#pinklaser"
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
@@ -346,65 +478,11 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars1.patt"
       >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
+        <a-asset-item id="bluelaser" src="assets/bluelaser.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <!-- Landfill -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-landfill.patt"
-      >
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <!-- Finale -->
-      <a-marker preset="pattern" type="pattern" url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-finale.patt">
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <!-- Faster -->
-      <a-marker preset="pattern" type="pattern" url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-faster.patt">
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <!-- Cupcake -->
-      <a-marker preset="pattern" type="pattern" url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-cupcake.patt">
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <!-- Country Crisis-->
-      <a-marker preset="pattern" type="pattern" url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-country.patt">
-        <a-asset-item id="cross" src="assets/wooden_cross.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#cross"
+          gltf-model="#bluelaser"
           rotation="270 0 0"
         ></a-entity>
       </a-marker>
