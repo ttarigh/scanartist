@@ -10,22 +10,7 @@
   </style>
   <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs="sourceType: webcam;">
-      <!-- blood bag -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-Screenshot%202024-02-05%20at%201.00.53%20PM.patt"
-      >
-        <a-asset-item id="bloodBag" src="assets/blood_bag.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#bloodBag"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- Angel Wings -->
+      <!-- Wings -->
       <a-marker
         preset="pattern"
         type="pattern"
@@ -53,7 +38,7 @@
         <a-asset-item id="baby" src="assets/baby.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
-          scale="0.2 0.2 0.2"
+          scale="3 3 3"
           gltf-model="#baby"
           rotation="270 0 0"
         ></a-entity>
@@ -67,9 +52,9 @@
         <a-asset-item id="baby2" src="assets/baby.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
-          scale="0.2 0.2 0.2"
+          scale="3 3 3"
           gltf-model="#baby2"
-          rotation="270 0 0"
+          rotation="-90 180 0"
         ></a-entity>
       </a-marker>
       <!-- Dick -->
@@ -115,9 +100,9 @@
         ></a-asset-item>
         <a-entity
           position="0 0 0"
-          scale="0.2 0.2 0.2"
+          scale="0.5 0.5 0.5"
           gltf-model="#dog"
-          rotation="270 0 0"
+          rotation="90 180 0"
         ></a-entity>
       </a-marker>
       <!-- Cupcake -->
@@ -134,10 +119,10 @@
           position="0 0 0"
           scale="0.2 0.2 0.2"
           gltf-model="#cupcake"
-          rotation="270 0 0"
+          rotation="0 0 0"
         ></a-entity>
       </a-marker>
-      <!-- CUPCAKE 2 -->
+      <!-- Choco CUPCAKE -->
       <a-marker
         preset="pattern"
         type="pattern"
@@ -148,10 +133,10 @@
           src="assets/extra_chocolate_marshmallow_cupcake.glb"
         ></a-asset-item>
         <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
+          position="0 0 -2"
+          scale="1 1 1"
           gltf-model="#cupcake2"
-          rotation="270 0 0"
+          rotation="0 0 0"
         ></a-entity>
       </a-marker>
       <!-- Horse -->
@@ -163,9 +148,9 @@
         <a-asset-item id="horse" src="assets/FRONTHORSE.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
-          scale="0.2 0.2 0.2"
+          scale="2 2 2"
           gltf-model="#horse"
-          rotation="270 0 0"
+          rotation="100 180 0"
         ></a-entity>
       </a-marker>
       <!-- Horse Skeleton -->
@@ -177,26 +162,9 @@
         <a-asset-item id="horseSkel" src="assets/HORSEBACK.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
-          scale="0.2 0.2 0.2"
+          scale="1 1 1"
           gltf-model="#horseSkel"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <!-- Trash Bag -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-trash.patt"
-      >
-        <a-asset-item
-          id="trash"
-          src="assets/simple_trash_bag.glb"
-        ></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#trash"
-          rotation="270 0 0"
+          rotation="100 180 0"
         ></a-entity>
       </a-marker>
       <!-- Weed -->
@@ -207,8 +175,8 @@
       >
         <a-asset-item id="weed" src="assets/weed_in_a_bag.glb"></a-asset-item>
         <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
+          position="-0.2 0 7"
+          scale="2 2 2"
           gltf-model="#weed"
           rotation="270 0 0"
         ></a-entity>
@@ -239,7 +207,7 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-water.patt"
       >
-        <a-asset-item id="water" src="assets/water.glb"></a-asset-item>
+        <a-asset-item id="water" src="assets/water1.glb"></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
@@ -254,13 +222,14 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-shirtBasic.patt"
       >
-        <a-asset-item id="shirt" src="assets/t_shirt.glb"></a-asset-item>
+        <a-asset-item id="shirt" src="assets/tshirtwithSaying.glb"></a-asset-item>
         <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
+          position="0 0 6"
+          scale="5 5 5"
           gltf-model="#shirt"
-          rotation="270 0 0"
-        ></a-entity>
+          rotation="280 0 0"
+        >
+      </a-entity>
       </a-marker>
 
       <!-- Made Of -->
@@ -323,12 +292,55 @@
         type="pattern"
         url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-finale.patt"
       >
-        <a-asset-item id="cross" src="assets/cross.glb"></a-asset-item>
+        <a-asset-item id="finale" src="assets/finale.glb"></a-asset-item>
+        <a-entity
+          position="0 0 0"
+          scale="0.02 0.02 0.02"
+          gltf-model="#finale"
+          rotation="0 0 0"
+        ></a-entity>
+      </a-marker>
+      <!-- Lazars -->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars3.patt"
+      >
+        <a-asset-item
+          id="greenlaser"
+          src="assets/greenlaser.glb"
+        ></a-asset-item>
         <a-entity
           position="0 0 0"
           scale="0.2 0.2 0.2"
-          gltf-model="#cross"
-          rotation="270 0 0"
+          gltf-model="#greenlaser"
+          rotation="180 0 0"
+        ></a-entity>
+      </a-marker>
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars2.patt"
+      >
+        <a-asset-item id="pinklaser" src="assets/pinklaser.glb"></a-asset-item>
+        <a-entity
+          position="0 0 0"
+          scale="0.2 0.2 0.2"
+          gltf-model="#pinklaser"
+          rotation="180 0 0"
+        ></a-entity>
+      </a-marker>
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars1.patt"
+      >
+        <a-asset-item id="bluelaser" src="assets/bluelaser.glb"></a-asset-item>
+        <a-entity
+          position="0 0 0"
+          scale="0.2 0.2 0.2"
+          gltf-model="#bluelaser"
+          rotation="180 0 0"
         ></a-entity>
       </a-marker>
 
@@ -441,50 +453,6 @@
           crossorigin="anonymous"
           src="assets/trendCycleNew.mp4"
         ></video>
-      </a-marker>
-
-      <!-- Lazars -->
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars3.patt"
-      >
-        <a-asset-item
-          id="greenlaser"
-          src="assets/greenlaser.glb"
-        ></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#greenlaser"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars2.patt"
-      >
-        <a-asset-item id="pinklaser" src="assets/pinklaser.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#pinklaser"
-          rotation="270 0 0"
-        ></a-entity>
-      </a-marker>
-      <a-marker
-        preset="pattern"
-        type="pattern"
-        url="https://raw.githubusercontent.com/ttarigh/rawPatt/main/pattern-lazars1.patt"
-      >
-        <a-asset-item id="bluelaser" src="assets/bluelaser.glb"></a-asset-item>
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          gltf-model="#bluelaser"
-          rotation="270 0 0"
-        ></a-entity>
       </a-marker>
 
       <a-entity camera></a-entity>
